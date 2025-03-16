@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacking Tool</title>
+    <style>
+        body {
+            background-color: black;
+            color: green;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+        }
+        a {
+            color: blue;
+            text-decoration: underline;
+        }
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .buttons div {
+            display: flex;
+            flex-direction: column;
+        }
+        .buttons button {
+            margin: 5px;
+            padding: 10px;
+            background-color: green;
+            color: black;
+            border: none;
+            cursor: pointer;
+        }
+        .buttons button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>We Are Anonymous</h1>
+        <p>We Do Not Forgive. We Are Anonymous.</p>
+        <p>Here is our website: <a href="javascript:void(0);" onclick="showHomePage()">http://Anonymous.com</a></p>
+        <div id="homePage" style="display: none;">
+            <div class="buttons">
+                <div>
+                    <button>Button 1</button>
+                    <button>Button 2</button>
+                    <button>Button 3</button>
+                    <button>Button 4</button>
+                    <button>Button 5</button>
+                    <button>Button 6</button>
+                </div>
+                <div>
+                    <button>Button 1</button>
+                    <button>Button 2</button>
+                    <button>Button 3</button>
+                    <button>Button 4</button>
+                    <button>Button 5</button>
+                    <button>Button 6</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showHomePage() {
+            document.querySelector('.container').innerHTML = document.getElementById('homePage').innerHTML;
+        }
+    </script>
+</body>
+</html>
